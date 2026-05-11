@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQFood - Rescue Food, Save Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- App Shell -->
+    <div id="app-container">
+        <!-- iOS Status Bar Mockup -->
+        <div class="ios-status-bar">
+            <div class="time">9:41</div>
+            <div class="dynamic-island"></div>
+            <div class="status-icons">
+                <i class="fa-solid fa-signal" style="font-size: 0.7rem;"></i>
+                <i class="fa-solid fa-wifi" style="font-size: 0.7rem;"></i>
+                <i class="fa-solid fa-battery-full" style="font-size: 0.9rem;"></i>
+            </div>
+        </div>
+
+        <!-- Top Navigation -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fa-solid fa-leaf"></i> ResQFood
+                </div>
+                <div class="user-stats-pill" onclick="app.navigateTo('profile')">
+                    <span class="coin-balance"><i class="fa-solid fa-coins" style="color: #f59e0b;"></i> <span id="header-coins">150</span></span>
+                    <div class="avatar-sm">
+                        <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area (Dynamic) -->
+        <main id="main-content">
+            <!-- Views will be injected here -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" data-target="home">
+                <i class="fa-solid fa-compass"></i>
+                <span>Discover</span>
+            </a>
+            <a href="#" class="nav-item" data-target="map">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+            </a>
+            <a href="#" class="nav-item" data-target="orders">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Orders</span>
+            </a>
+            <a href="#" class="nav-item" data-target="impact">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Impact</span>
+            </a>
+            <a href="#" class="nav-item" data-target="profile">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+        
+        <!-- iOS Home Indicator -->
+        <div class="ios-home-indicator"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
